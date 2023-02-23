@@ -1,0 +1,13 @@
+#Wed Feb 22 15:21:08 IST 2023
+/Users/karan/Desktop/Wildfly-Task/microprofile-rest-client/country-client/src/main/java/org/wildfly/quickstarts/microprofile/rest/client/CountriesResource.java=1677056711129
+/Users/karan/Desktop/Wildfly-Task/microprofile-rest-client/country-client/src/main/java/org/wildfly/quickstarts/microprofile/rest/client/CountriesServiceClient.java=1677057590407
+/Users/karan/Desktop/Wildfly-Task/microprofile-rest-client/country-client/src/main/java/org/wildfly/quickstarts/microprofile/rest/client/JaxRsApplication.java=1676299950000
+/Users/karan/Desktop/Wildfly-Task/microprofile-rest-client/country-client/src/main/java/org/wildfly/quickstarts/microprofile/rest/client/NotFoundResponseExceptionMapper.java=1676299950000
+/Users/karan/Desktop/Wildfly-Task/microprofile-rest-client/country-client/src/main/java/org/wildfly/quickstarts/microprofile/rest/client/RootResource.java=1676299950000
+/Users/karan/Desktop/Wildfly-Task/microprofile-rest-client/country-client/src/main/java/org/wildfly/quickstarts/microprofile/rest/client/model/Account.java=1677059419920
+/Users/karan/Desktop/Wildfly-Task/microprofile-rest-client/country-client/src/main/java/org/wildfly/quickstarts/microprofile/rest/client/model/Country.java=1676299950000
+/Users/karan/Desktop/Wildfly-Task/microprofile-rest-client/country-client/src/main/resources/META-INF/microprofile-config.properties=1676299950000
+/Users/karan/Desktop/Wildfly-Task/microprofile-rest-client/country-client/src/test/java/org/wildfly/quickstarts/microprofile/rest/client/MicroProfileRESTClientIT.java=1676299950000
+/Users/karan/Desktop/Wildfly-Task/microprofile-rest-client/country-client/src/test/java/org/wildfly/quickstarts/microprofile/rest/client/api/CountryProviderResource.java=1676299950000
+configuration*?=D899F0E685FBA44318325348FA7132DD82912C76
+module-resource*?\:/wildfly-checkstyle/suppressions.xml=DD3FD5987C62C3034A4613F83C42B24683BCFC2E

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="8.5">
+<file name="/Users/karan/Desktop/Wildfly-Task/microprofile-rest-client/country-server/src/main/java/org/wildfly/quickstarts/microprofile/Country.java">
+</file>
+<file name="/Users/karan/Desktop/Wildfly-Task/microprofile-rest-client/country-server/src/main/java/org/wildfly/quickstarts/microprofile/JaxRsApplication.java">
+</file>
+<file name="/Users/karan/Desktop/Wildfly-Task/microprofile-rest-client/country-server/src/main/java/org/wildfly/quickstarts/microprofile/Account.java">
+</file>
+<file name="/Users/karan/Desktop/Wildfly-Task/microprofile-rest-client/country-server/src/main/java/org/wildfly/quickstarts/microprofile/AccountProviderResources.java">
+</file>
+<file name="/Users/karan/Desktop/Wildfly-Task/microprofile-rest-client/country-server/src/main/java/org/wildfly/quickstarts/microprofile/RootResource.java">
+</file>
+<file name="/Users/karan/Desktop/Wildfly-Task/microprofile-rest-client/country-server/src/main/java/org/wildfly/quickstarts/microprofile/CountryProviderResource.java">
+</file>
+</checkstyle>

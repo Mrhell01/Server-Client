@@ -4,9 +4,9 @@ public interface AccountDao {
     Account getForAccountuser(String accountUser);
 
 
-    Account getForUsername(String username);
+//    Account getForUsername(String username);
 
-    static void createAccount(Account account) {
+    public void createAccount(Account account);
 
-    }
 }
+

@@ -5,9 +5,8 @@ import javax.persistence.NoResultException;
 import javax.persistence.Query;
 import javax.security.auth.login.AccountException;
 import javax.transaction.SystemException;
-
+import javax.transaction.UserTransaction;
 import org.jboss.arquillian.core.api.annotation.Inject;
-import org.wildfly.quickstarts.microprofile.rest.client.model.Account;
 
 public class ManagedBeanAccountDao implements AccountDao {
 
@@ -15,25 +14,25 @@ public class ManagedBeanAccountDao implements AccountDao {
     private EntityManager entityManager;
 
     @Inject
-    private AccountException utx;
+    private UserTransaction utx;
 
     public ManagedBeanAccountDao() {
     }
 
     public Account getForAccountuser(String accountuser) {
         try {
-//            Account account;
-            Account Account;
+
+            Account account;
             try {
                 utx.begin();
                 Query query = entityManager.createQuery("select u from User u where u.accountuser = :accountuser");
                 query.setParameter("username", accountuser);
-                Account = (Account) ((Query) query).getSingleResult();
+                account = (Account) ((Query) query).getSingleResult();
             } catch (NoResultException e) {
-                Account = null;
+                account = null;
             }
             utx.commit();
-            return Account;
+            return account;
         } catch (Exception e) {
             try {
                 utx.rollback();
@@ -45,12 +44,10 @@ public class ManagedBeanAccountDao implements AccountDao {
 
     }
 
-    @Override
+//    @Override
     public Account getForUsername(String username) {
         return null;
     }
-
-
 
     public void createAccount(Account account) {
         try {

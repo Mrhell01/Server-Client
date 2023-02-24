@@ -8,8 +8,8 @@ import javax.inject.Named;
 
 public class CreateController {
 
-    @Inject
-    private FacesContext facesContext;
+//    @Inject
+//    private FacesContext facesContext;
 
     @Inject
     private AccountDao accountDao;
@@ -19,17 +19,17 @@ public class CreateController {
     private Account newAccount = new Account();
     public void create() {
         try {
-            AccountDao.createAccount(newAccount);
+            accountDao.createAccount(newAccount);
             String message = "A new user with id " + newAccount.getId() + " has been created successfully";
-            facesContext.addMessage(null, new FacesMessage(message));
+//            facesContext.addMessage(null, new FacesMessage(message));
         } catch (Exception e) {
             String message = "An error has occured while creating the user (see log for details)";
-            facesContext.addMessage(null, new FacesMessage(message));
+//            facesContext.addMessage(null, new FacesMessage(message));
         }
     }
 
-    private class FacesContext {
-        public void addMessage(Object o, FacesMessage facesMessage) {
-        }
-    }
+//    private class FacesContext {
+//        public void addMessage(Object o, FacesMessage facesMessage) {
+//        }
+//    }
 }

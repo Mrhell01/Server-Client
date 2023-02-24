@@ -9,11 +9,11 @@ import javax.persistence.Query;
 
 @Stateful
 @Alternative
-public class EJBAccountDao implements  AccountDao{
+public class EJBAccountDao implements  AccountDao {
     
     private EntityManager entityManager;
     
-    public Account getforAccount(String acccountuser) {
+    public Account getForAccountuser(String acccountuser) {
         try{
             Query query = entityManager.createQuery("select u from User u where u.accountuser = ?");
             query.setParameter(1, acccountuser);
@@ -23,13 +23,17 @@ public class EJBAccountDao implements  AccountDao{
         }
         
     }
+
+
     public void createAccount(Account account) {
         entityManager.persist(account);
     }
-    @Override
-    public Account getForAccountuser(String accountUser) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getForAccountuser'");
-    }
+
+//    @Override
+////    public Account getForAccountuser(String accountUser) {
+////        // TODO Auto-generated method stub
+////        throw new UnsupportedOperationException("Unimplemented method 'getForAccountuser'");
+////    }
+////
 
 }

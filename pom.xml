@@ -79,7 +79,12 @@
             </snapshots>
             <layout>default</layout>
         </repository>
-    </repositories>
+      <repository>
+          <id>clojars</id>
+          <name>Clojars</name>
+          <url>https://repo.clojars.org/</url>
+      </repository>
+  </repositories>
     <pluginRepositories>
         <pluginRepository>
             <id>jboss-public-maven-repository</id>
@@ -147,9 +152,21 @@
 
     </dependencies>
   </dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>chia</groupId>
+            <artifactId>static</artifactId>
+            <version>0.0.7</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.as</groupId>
+            <artifactId>jboss-as-arquillian</artifactId>
+            <version>7.2.0.Final</version>
+        </dependency>
+    </dependencies>
 
 
-  <build>
+    <build>
     <pluginManagement>
       <plugins>
         <plugin>

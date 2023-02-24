@@ -2,27 +2,33 @@ package org.wildfly.quickstarts.microprofile;
 
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
+import javax.persistence.Query;
+import javax.security.auth.login.AccountException;
 import javax.transaction.SystemException;
 
-import jakarta.ws.rs.client.Entity;
-// import org.jboss.arquillian.core.api.annotation.Inject;
+import org.jboss.arquillian.core.api.annotation.Inject;
+import org.wildfly.quickstarts.microprofile.rest.client.model.Account;
 
 public class ManagedBeanAccountDao implements AccountDao {
-    
+
     @Inject
     private EntityManager entityManager;
 
     @Inject
-    private AccountTransaction utx;
-    
+    private AccountException utx;
+
+    public ManagedBeanAccountDao() {
+    }
+
     public Account getForAccountuser(String accountuser) {
         try {
-            Account account;
+//            Account account;
+            Account Account;
             try {
                 utx.begin();
                 Query query = entityManager.createQuery("select u from User u where u.accountuser = :accountuser");
                 query.setParameter("username", accountuser);
-                Account = (Account) query.getSingleResult();
+                Account = (Account) ((Query) query).getSingleResult();
             } catch (NoResultException e) {
                 Account = null;
             }
@@ -39,30 +45,29 @@ public class ManagedBeanAccountDao implements AccountDao {
 
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     @Override
-    public Account getForAccountuser(String accountUser) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getForAccountuser'");
+    public Account getForUsername(String username) {
+        return null;
     }
 
-    @Override
+
+
     public void createAccount(Account account) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'createAccount'");
+        try {
+            try {
+                utx.begin();
+                entityManager.persist(account);
+            } finally {
+                utx.commit();
+            }
+        } catch (Exception e) {
+            try {
+                utx.rollback();
+            } catch (SystemException se) {
+                throw new RuntimeException(se);
+            }
+            throw new RuntimeException(e);
+        }
     }
-    
+
 }

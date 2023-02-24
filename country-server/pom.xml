@@ -38,6 +38,31 @@
       <artifactId>jakarta.ws.rs-api</artifactId>
       <scope>provided</scope>
     </dependency>
+    <dependency>
+      <groupId>org.wildfly.quickstarts</groupId>
+      <artifactId>country-client</artifactId>
+      <version>28.0.0.Beta1-SNAPSHOT</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>javax</groupId>
+      <artifactId>javaee-api</artifactId>
+      <version>8.0</version>
+    </dependency>
+    <dependency>
+      <groupId>chia</groupId>
+      <artifactId>static</artifactId>
+      <version>0.0.7</version>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.arquillian.core</groupId>
+      <artifactId>arquillian-core-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.as</groupId>
+      <artifactId>jboss-as-arquillian</artifactId>
+      <version>7.2.0.Final</version>
+    </dependency>
   </dependencies>
 
   <build>
@@ -52,6 +77,13 @@
       </plugin>
     </plugins>
   </build>
+  <repositories>
+    <repository>
+      <id>clojars</id>
+      <name>Clojars</name>
+      <url>https://repo.clojars.org/</url>
+    </repository>
+  </repositories>
 
   <profiles>
     <profile>

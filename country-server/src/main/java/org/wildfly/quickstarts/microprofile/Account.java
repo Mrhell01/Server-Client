@@ -1,45 +1,50 @@
-package org.wildfly.quickstarts.microprofile;
+    package org.wildfly.quickstarts.microprofile;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+    import javax.persistence.*;
 
-@Entity
-@Table(name ="Account")
-public class Account {
+    @Entity
+    @Table(name ="Account")
+    public class Account {
+        @Id
+        @GeneratedValue
+        private Long id;
 
-@Column(unique = true)
-private String Accountuser;
+        @Column(unique = true)
+    private String Accountuser;
 
-private String firstName;
+    private String firstName;
 
-private String lastName;
+    private String lastName;
 
-public String getAccountuser() {
-    return Accountuser;
-}
+        public Long getId() {
+            return id;
+        }
 
-public void setAccountuser(String accountuser) {
-    Accountuser = accountuser;
-}
+    public String getAccountuser() {
+        return Accountuser;
+    }
 
-public String getFirstName() {
-    return firstName;
-}
+    public void setAccountuser(String accountuser) {
+        Accountuser = accountuser;
+    }
 
-public void setFirstName(String firstName) {
-    this.firstName = firstName;
-}
+    public String getFirstName() {
+        return firstName;
+    }
 
-public String getLastName() {
-    return lastName;
-}
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
 
-public void setLastName(String lastName) {
-    this.lastName = lastName;
-}
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 
 
-}
+    }
 
 

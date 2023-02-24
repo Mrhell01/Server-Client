@@ -12,6 +12,11 @@
       <option name="url" value="https://repo.maven.apache.org/maven2" />
     </remote-repository>
     <remote-repository>
+      <option name="id" value="clojars" />
+      <option name="name" value="Clojars" />
+      <option name="url" value="https://repo.clojars.org/" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="redhat-ga-maven-repository" />
       <option name="name" value="Red Hat GA Maven Repository" />
       <option name="url" value="https://maven.repository.redhat.com/ga/" />
